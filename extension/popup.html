@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Youtube Transcript Summariser</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        h1 {
+            text-align: center;
+            color: #ff4081;
+            margin-top: 50px;
+            animation: rainbow 5s linear infinite;
+        }
+        body {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f7f7f7;
+        }
+        button {
+            background-color: #ff4081;
+            color: #ffffff;
+            border-radius: 8px;
+            padding: 10px 20px;
+            font-size: large;
+            display: block;
+            margin: 30px auto;
+            border: none;
+            cursor: pointer;
+            animation: pulse 1.5s ease infinite;
+        }
+        button:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+            animation: none;
+        }
+        p {
+            font-size: medium;
+            color: #333333;
+            margin-top: 20px;
+        }
+        @keyframes rainbow {
+            0% { color: #ff4081; }
+            20% { color: #ffbf00; }
+            40% { color: #01bcd4; }
+            60% { color: #4caf50; }
+            80% { color: #e91e63; }
+            100% { color: #ff4081; }
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <h1>Just In Time Agent</h1>
+    <button id="summarise" type="button">Get</button>
+    <br/>
+    <p id="output"></p>
+    <script src="popup.js"></script>
+</body>
+</html>
